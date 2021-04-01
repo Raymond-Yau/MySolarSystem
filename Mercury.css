@@ -1,0 +1,44 @@
+.Mercury{
+	background:url(planet/1.jpg) repeat-x 0 0;
+		background-size:200%;
+		margin:-5px 0 0 -5px;
+		position:absolute;
+		width: 1vw;
+		height:1vw;
+		z-index:2;
+		border:0.5px solid rgba(26,18,101,0.3);
+		border-radius: 100%;
+		box-shadow:-8px 0 25px rgba(256,256,256,0.3),-1px -2px 
+		14px rgba(256,256,256,0.5) inset;
+		
+		animation: 
+			nudge 5864.62s linear infinite ,
+			animXMercury 0.88s cubic-bezier(0.36,0,0.64,1) -0.44s infinite alternate, 
+			animYMercury 0.88s cubic-bezier(0.36,0,0.64,1)  0s infinite alternate;
+} 
+#MercuryOrbit {
+	width: 12.5vw;
+	height:5vw;
+	border:3px dotted ;
+	border-width: 0 4px 7px 4px;
+	border-radius: 50%;
+	position: absolute;
+	left: 43.75vw;
+	top: 20vw;
+	z-index: 1;
+	border-color: #999;
+}
+@keyframes animXMercury{
+	0% {left: 57vw;}
+	100% {left: 44vw;}
+	
+}
+@keyframes animYMercury{
+	0% {top: 20vw;z-index:-2;}
+	50%{z-index:2;}
+	100% {top: 25vw;}
+}
+@keyframes nudge {
+	0%{background-position: 0 0;}
+	100%{background-position: -1639px 0;}
+}

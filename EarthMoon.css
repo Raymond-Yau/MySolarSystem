@@ -1,0 +1,89 @@
+.earth{
+			background:url(planet/3.jpg) repeat-x 0 0;
+			background-size:240%;
+			margin:-5px 0 0 -5px;
+			position:absolute;
+		width: 2.5vw;
+		height:2.5vw;
+		z-index:6;
+			border:0.5px solid rgba(26,18,101,0.3);
+			border-radius: 100%;
+			box-shadow:-8px 0 25px rgba(256,256,256,0.3),-1px -2px 
+			14px rgba(256,256,256,0.5) inset;
+		
+		animation: 
+			nudge 99.7268s linear infinite ,
+			animXEarth 3.65s cubic-bezier(0.36,0,0.64,1) -1.825s infinite alternate, 
+			animYEarth 3.65s cubic-bezier(0.36,0,0.64,1)  0s infinite alternate;
+} 
+#EarthOrbit {
+	width: 22.5vw;
+	height: 9vw;
+	border:3px dotted #999;
+	border-width: 0.5px 5px 7px 5px;
+	border-radius: 50%;
+	position: absolute;
+	left: 38.75vw;
+	top: 18vw;
+	z-index: 5;
+}
+@keyframes animXEarth{
+	0% {left: 61vw;}
+	100% {left: 38vw;}
+	
+}
+@keyframes animYEarth{
+	0% {top: 16.5vw;z-index:-5;}
+	50%{z-index:5;}
+	100% {top: 26vw;}
+}
+@keyframes nudge {
+	0%{background-position: 0 0;}
+	100%{background-position: -1639px 0;}
+}
+
+.moon {
+	background:url(planet/moon.jpg) no-repeat 0 0;
+	background-size: 120%;
+	background-position: -3px -3px;
+    height:0.8vw;
+	width:0.8vw;
+	position:absolute;
+	left:35%;
+	top:40%;
+	
+	border:0.5px;
+	border-radius: 100%;
+	box-shadow:-8px 0 25px rgba(256,256,256,0.3),-1px -2px 
+	14px rgba(256,256,256,0.5) inset;
+  	
+	animation: 
+		animmoon 27.321661s linear infinite ;
+}
+@keyframes animmoon{
+  0%, 100% {
+    transform: translate(0, 0);
+	filter: alpha(opacity=100); opacity: 1;
+  }
+  15% {
+    
+	filter: alpha(opacity=100); opacity: 1;
+  }
+  25% {
+    transform: translate(25px, -6px);
+	filter: alpha(opacity=20); opacity: 0.2;
+  }
+  50% {
+    transform: translate(0px, -3px);
+	filter: alpha(opacity=0); opacity: 0;
+  }
+  
+  75% {
+    transform: translate(-25px, 3px);
+	filter: alpha(opacity=20); opacity: 0.2;
+  }
+  85% {
+ 
+	filter: alpha(opacity=100); opacity: 1;
+  }
+}

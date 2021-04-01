@@ -1,0 +1,60 @@
+#EarthOrbit1{
+		width: 47vw;
+		height:18vw;
+		border: 3px white;
+		border-style: dotted;  
+		border-width: 0px 3px 5px 3px;
+		border-radius: 50%;
+		position: absolute;
+		left: 27vw;
+		top: 15.5vw;
+		z-index: 11;
+}
+#EarthOrbit2{
+		width: 49vw;
+		height:18.5vw;
+		border: 3px wheat;
+		border-style: dotted;  
+		border-width: 0px 3px 5px 3px;
+		border-radius: 50%;
+		position: absolute;
+		left: 25.5vw;
+		top: 15.5vw;
+		z-index: 11;
+}
+#EarthOrbit3{
+		width: 52vw;
+		height:18.5vw;
+		border: 3px white;
+		border-style: dotted;  
+		border-width: 0px 3px 5px 3px;
+		border-radius: 50%;
+		position: absolute;
+		left: 25.5vw;
+		top: 16vw;
+		z-index: 11;
+}
+#EarthOrbit4{
+		width: 54vw;
+		height:19vw;
+		border: 3px wheat;
+		border-style: dotted;  
+		border-width: 0px 3px 5px 3px;
+		border-radius: 50%;
+		position: absolute;
+		left: 24vw;
+		top: 15vw;
+		z-index: 11;
+}
+#EarthOrbit5{
+		width: 60vw;
+		height:19vw;
+		border: 3px white;
+		border-style: dotted;  
+		border-width: 0px 3px 5px 3px;
+		border-radius: 50%;
+		position: absolute;
+		left: 20vw;
+		top: 16vw;
+		z-index: 11;
+}

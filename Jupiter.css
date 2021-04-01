@@ -1,0 +1,50 @@
+.Jupiter{
+	background:url(planet/5.jpg) repeat-x 0 0;
+		background-size:200%;
+		position:absolute;
+	width:6vw;
+	height:6vw;
+	z-index:10;
+		border:0.5px solid rgba(26,18,101,0.3);
+		border-radius: 100%;
+		box-shadow:-8px 0 25px rgba(256,256,256,0.3),-1px -2px 
+		14px rgba(256,256,256,0.5) inset;
+		
+		animation: 
+	  	nudge 41.3538021s linear infinite ,
+		animXJupiter 43.289s cubic-bezier(0.36,0,0.64,1) -21.6445s infinite alternate, animYJupiter 43.289s cubic-bezier(0.36,0,0.64,1)  0s infinite alternate;
+} 
+#JupiterOrbit {
+	width: 45vw;
+	height:16vw;
+	border: 3px dotted #999;
+	border-width: 0.3px 6px 9px 6px;
+	border-radius: 50%;
+	position: absolute;
+	left: 28vw;
+	top: 16vw;
+	z-index: 9;
+}
+@keyframes animXJupiter{
+	0% {left: 70vw;}
+	100% {left: 25vw;}
+	
+}
+@keyframes animYJupiter{
+	0% {top: 13.5vw;z-index:-10;}
+	50%{z-index:10;}
+	100% {top: 29.5vw;}
+}
+@keyframes nudge {
+	0%{background-position: 0 0;}
+	100%{background-position: -1639px 0;}
+}
+#Saturnsrings{
+	width: 8vw;
+	height:4vw;
+	border: 3px double #999;
+	border-width: 0.3px 6px 9px 6px;
+	border-radius: 50%;
+	position: relative;
+	z-index: 9;
+}

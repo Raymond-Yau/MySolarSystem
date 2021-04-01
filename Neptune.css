@@ -1,0 +1,41 @@
+.Neptune{
+	background:url(planet/8.jpg) repeat-x 0 0;
+		background-size:200%;
+		position:absolute;
+	width:3vw;
+	height:3vw;
+	z-index:16;
+		border:0.5px solid rgba(26,18,101,0.3);
+		border-radius: 100%;
+		box-shadow:-8px 0 25px rgba(256,256,256,0.3),-1px -2px 
+		14px rgba(256,256,256,0.5) inset;
+		
+	animation: 
+	  	nudge 67.125000s linear infinite ,
+		animXNeptune 601.52s cubic-bezier(0.36,0,0.64,1) -300.76s infinite alternate, 
+		animYNeptune 601.52s cubic-bezier(0.36,0,0.64,1)  0s infinite alternate;
+} 
+#NeptuneOrbit {
+	width: 90vw;
+	height:30vw;
+	border: 3px dotted #999;
+	border-width: 0.2px 9px 14px 9px;
+	border-radius: 50%;
+	position: absolute;
+	left: 5.5vw;
+	top: 12vw;
+	z-index: 13;
+}
+@keyframes animXNeptune{
+	0% {left: 95vw;}
+	100% {left: 4vw;}
+}
+@keyframes animYNeptune{
+	0% {top: 10vw;z-index:-16;}
+	50%{z-index:16;}
+	100% {top: 41.5vw;}
+}
+@keyframes nudge {
+	0%{background-position: 0 0;}
+	100%{background-position: -1639px 0;}
+}

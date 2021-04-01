@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>前端表单验证</title>
+        <link rel="stylesheet" type="text/css" href="layui-v2.3.0/layui/css/layui.css"/>
+        <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.validate.js"></script>
+        <script type="text/javascript" src="layui-v2.3.0/layui/layui.js"></script>
+        <style type="text/css">
+            #form-box{
+                width: 700px;
+                height: 300px;
+                margin: auto;
+                position: relative;
+                top: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="formCheck.html" method="post">
+            <div id="form-box" class="layui-form layui-form-pane">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">用户名</label>
+                    <div class="layui-input-inline">
+                       <input type="text" name="userName" class="layui-input">
+                    </div>       
+                 </div>
+                 <div class="layui-form-item">
+                    <label class="layui-form-label">密码</label>
+                    <div class="layui-input-inline">
+                       <input type="text" name="passWord" class="layui-input">
+                    </div>   
+                 </div>
+                 <div class="layui-form-item">                   
+                       <input type="submit" name="" id="frmSubmit" value="提交" class="layui-btn layui-btn-primary layui-btn-normal" />
+                 </div>
+            </div>
+        </form>
+    </body>
+    <script type="text/javascript">
+        $(function(){
+                $("form").validate({
+                    rules: {
+                        userName: {
+                            required: true, //该项表示该字段为必填项
+                            maxlength: 5 //表示该字段的最大长度为5
+                        },
+                        passWord: {
+                            required: true,
+                            number: true  //表示该字段必须为数字
+                        }
+                    },
+                    messages: {
+                        userName: {
+                            required: "*必填",
+                            maxlength: "*最多5个字符"
+                        },
+                        passWord: {
+                            required: "*必填",
+                            number: "*必须是合法的数字"
+                        }
+                    }                    
+                })        
+            });
+    </script>
+</html>

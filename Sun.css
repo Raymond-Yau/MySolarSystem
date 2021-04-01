@@ -1,0 +1,20 @@
+.sun {
+	background:url(planet/sun.png) repeat-x 0 0 ;
+	background-size: cover;
+  width: 9vw;
+  height: 9vw;
+	position:absolute;
+	left:45.8vw;
+	top:18vw;
+	z-index:1;
+	border:0.5px;
+	border-radius: 100%;
+	box-shadow:-2px 0 6px rgba(256,256,256,0.3),-1px -2px 
+	1px rgba(256,256,256,0.5) inset;
+	animation: 
+	  	nudge1 700s linear infinite ;
+}
+@keyframes nudge1 {
+	0%{background-position: -1600px 0;}
+	100%{background-position: 0 0;}
+}
